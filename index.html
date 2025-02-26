@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmų Nuomos Platforma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="title.png">
+    <div class="form-container">
+        <input type="text" id="title" placeholder="Pavadinimas">
+        <input type="number" id="price" placeholder="Kaina" step="0.01" min="1" max="10">
+        <select id="category">
+            <option value="documentary">Dokumentika</option>
+            <option value="family">Šeimai</option>
+            <option value="animation">Animacija</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Siaubo</option>
+        </select>
+        <input type="number" id="rating" placeholder="Įvertinimas" step="0.01" min="1" max="10">
+        <input type="url" id="image" placeholder="Nuotraukos URL">
+        <button onclick="addMovie()">Pridėti filmą</button>
+    </div>
+    <div class="filter-sort">
+        <select id="filter" onchange="filterMovies()">
+            <option value="all">Visos kategorijos</option>
+            <option value="documentary">Dokumentika</option>
+            <option value="family">Šeimai</option>
+            <option value="animation">Animacija</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Siaubo</option>
+        </select>
+        <button onclick="sortMovies('title')">Rūšiuoti pagal pavadinimą</button>
+        <button onclick="sortMovies('rating')">Rūšiuoti pagal įvertinimą</button>
+    </div>
+    <div id="movie-list" class="movie-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
