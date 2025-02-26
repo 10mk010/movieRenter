@@ -119,8 +119,5 @@ function sortMovies(type) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    loadMovies(); // Load movies from localStorage when page loads
+    loadMovies(); 
 });
-
-// PRIMINIMAS: change background-color and border of ivetinimas cell depending on rating value if rating = 1 more red if rating = 10 more green
-
